@@ -12,9 +12,21 @@ public class LoadingUI : MonoBehaviour, IController
 {
     public Slider ProgressBar;
     public TMP_Text MsgText;
+    public TMP_Text VersionText;
 
     private void Start()
     {
+        // 初始化 UI 状态
+        ProgressBar.value = 0;
+        MsgText.text = "正在检查资源更新...";
+
+        // 1. 监听版本号更新 (显示当前准备更新或已确定的版本)
+        this.RegisterEvent<AssetVersionUpdateEvent>(e =>
+        {
+            VersionText.text = $"当前版本: {e.Version}";
+        }).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+
         // 监听进度
         this.RegisterEvent<AssetDownloadUpdateEvent>(e => {
             ProgressBar.value = e.Progress;

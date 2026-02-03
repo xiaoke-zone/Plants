@@ -30,12 +30,27 @@ public class HotUpdateSystem : AbstractSystem, IHotUpdateSystem
 
         // --- 步骤 1: 加载热更 DLL ---
         // 根据你的截图，地址应该是文件名：HotUpdate.dll
-        var handle = package.LoadAssetSync<TextAsset>("HotUpdate.dll");
+        //var handle = package.LoadAssetSync<TextAsset>("HotUpdate.dll");
 
-        // 等待加载完成（即使是 Sync 模式，在协程里 yield 一下能确保生命周期正确）
-        yield return handle;
+        //// 等待加载完成（即使是 Sync 模式，在协程里 yield 一下能确保生命周期正确）
+        //yield return handle;
 
-        if (handle.Status != EOperationStatus.Succeed)
+        //if (handle.Status != EOperationStatus.Succeed)
+        //{
+        //    Debug.LogError($"[HotUpdate] 无法找到资源！请检查地址是否为: HotUpdate.dll \n错误详情: {handle.LastError}");
+        //    yield break;
+        //}
+
+        //TextAsset dllAsset = handle.AssetObject as TextAsset;
+        //var hotUpdateAss = System.Reflection.Assembly.Load(dllAsset.bytes);
+        //Debug.Log("--- 主热更 DLL 加载成功 ---");
+
+
+#if !UNITY_EDITOR
+    // --- 手机端/发布端：必须从 YooAsset 加载二进制资源 ---
+    var handle = package.LoadAssetSync<TextAsset>("HotUpdate.dll");
+    yield return handle;
+    if (handle.Status != EOperationStatus.Succeed)
         {
             Debug.LogError($"[HotUpdate] 无法找到资源！请检查地址是否为: HotUpdate.dll \n错误详情: {handle.LastError}");
             yield break;
@@ -44,7 +59,20 @@ public class HotUpdateSystem : AbstractSystem, IHotUpdateSystem
         TextAsset dllAsset = handle.AssetObject as TextAsset;
         var hotUpdateAss = System.Reflection.Assembly.Load(dllAsset.bytes);
         Debug.Log("--- 主热更 DLL 加载成功 ---");
+#else
+        // --- 编辑器模式：直接获取当前项目已有的程序集 ---
+        // HybridCLR 在编辑器下会自动编译程序集，我们直接根据名字找即可
+        var hotUpdateAss = System.AppDomain.CurrentDomain.GetAssemblies()
+                            .FirstOrDefault(a => a.GetName().Name == "HotUpdate");
 
+        // 如果找不到，说明你还没创建这个程序集定义（Assembly Definition）
+        if (hotUpdateAss == null)
+        {
+            Debug.LogError("编辑器下未找到 HotUpdate 程序集，请检查 Assembly Definition 配置");
+            yield break;
+        }
+        Debug.Log("--- 编辑器模式：直接挂载本地程序集成功 ---");
+#endif
          
 
         // --- 步骤 2: 补充 AOT 元数据 ---

@@ -17,3 +17,8 @@ public struct AssetUpdateErrorEvent
 {
     public string Error;
 }
+
+public struct AssetVersionUpdateEvent
+{
+    public string Version;
+}

@@ -202,6 +202,9 @@ public class YooAssetSystem : AbstractSystem, IAssetSystem
 
         // 5. 保存版本号
         PlayerPrefs.SetString("GAME_VERSION", targetVersion);
+        // ... 在获取到 targetVersion 之后
+        this.SendEvent(new AssetVersionUpdateEvent { Version = targetVersion });
+
         Debug.Log($"资源系统就绪，当前版本: {targetVersion}");
     }
 }
