@@ -1,0 +1,11 @@
+{
+    "FileVersion": "1.0.0",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "2026-02-03-642",
+    "Wrappers": [
+        {
+            "BundleGUID": "48e2d1d93b4d0fa2c51129cbf680770e",
+            "FileName": "48e2d1d93b4d0fa2c51129cbf680770e.bundle"
+        }
+    ]
+}

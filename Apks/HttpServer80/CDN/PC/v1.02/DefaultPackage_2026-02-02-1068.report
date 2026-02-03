@@ -1,0 +1,174 @@
+{
+    "Summary": {
+        "YooVersion": "2.3.18",
+        "UnityVersion": "2022.3.62f1",
+        "BuildDate": "2026/2/2 17:50:38",
+        "BuildSeconds": 7,
+        "BuildTarget": 19,
+        "BuildPipeline": "ScriptableBuildPipeline",
+        "BuildBundleType": 2,
+        "BuildPackageName": "DefaultPackage",
+        "BuildPackageVersion": "2026-02-02-1068",
+        "BuildPackageNote": "2026/2/2 17:50:30",
+        "UniqueBundleName": false,
+        "EnableAddressable": true,
+        "SupportExtensionless": true,
+        "LocationToLower": false,
+        "IncludeAssetGUID": false,
+        "AutoCollectShaders": true,
+        "IgnoreRuleName": "YooAsset.Editor.NormalIgnoreRule",
+        "ClearBuildCacheFiles": true,
+        "UseAssetDependencyDB": true,
+        "EnableSharePackRule": true,
+        "SingleReferencedPackAlone": true,
+        "EncryptionServicesClassName": "YooAsset.Editor.EncryptionNone",
+        "ManifestProcessServicesClassName": "YooAsset.Editor.ManifestProcessNone",
+        "ManifestRestoreServicesClassName": "YooAsset.Editor.ManifestRestoreNone",
+        "FileNameStyle": 0,
+        "CompressOption": 2,
+        "DisableWriteTypeTree": false,
+        "IgnoreTypeTreeChanges": true,
+        "ReplaceAssetPathWithAddress": false,
+        "WriteLinkXML": true,
+        "CacheServerHost": "",
+        "CacheServerPort": 0,
+        "BuiltinShadersBundleName": "unityshaders.bundle",
+        "MonoScriptsBundleName": "",
+        "AssetFileTotalCount": 8,
+        "MainAssetTotalCount": 8,
+        "AllBundleTotalCount": 1,
+        "AllBundleTotalSize": 1949050,
+        "EncryptedBundleTotalCount": 0,
+        "EncryptedBundleTotalSize": 0
+    },
+    "AssetInfos": [
+        {
+            "Address": "HotUpdate.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/HotUpdate.dll.bytes",
+            "AssetGUID": "f0d65350871f60b4cbddb02edab61086",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "MainAOT.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/MainAOT.dll.bytes",
+            "AssetGUID": "ed7e9763015611a4aa3e2096a5ba5a72",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "mscorlib.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/mscorlib.dll.bytes",
+            "AssetGUID": "ca8c8d1d564f29c429eb3e0c53701f01",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "QFramework.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/QFramework.dll.bytes",
+            "AssetGUID": "152f85f4433bef24e8335e7074d2dd2e",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "System.Core.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/System.Core.dll.bytes",
+            "AssetGUID": "d009881bd08d70040acdf8d4d86fe285",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "System.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/System.dll.bytes",
+            "AssetGUID": "b3cc0ea68933b044ea9bfb1ab52559f8",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "UnityEngine.CoreModule.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/UnityEngine.CoreModule.dll.bytes",
+            "AssetGUID": "39f3e4bb1a3f130488cd66dd5eadf1df",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "YooAsset.dll",
+            "AssetPath": "Assets/Examples/AB/HotDll/PC/YooAsset.dll.bytes",
+            "AssetGUID": "4018a95e70c632c43bf02292406c158e",
+            "AssetTags": [],
+            "MainBundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "MainBundleSize": 1949050,
+            "DependAssets": [],
+            "DependBundles": []
+        }
+    ],
+    "BundleInfos": [
+        {
+            "BundleName": "assets_examples_ab_hotdll_pc.bundle",
+            "FileName": "700292cc7d9f1ef50d25a1eb30ef3549.bundle",
+            "FileHash": "700292cc7d9f1ef50d25a1eb30ef3549",
+            "FileCRC": 3165452976,
+            "FileSize": 1949050,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [],
+            "ReferenceBundles": [],
+            "BundleContents": [
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/HotUpdate.dll.bytes",
+                    "AssetGUID": "f0d65350871f60b4cbddb02edab61086"
+                },
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/MainAOT.dll.bytes",
+                    "AssetGUID": "ed7e9763015611a4aa3e2096a5ba5a72"
+                },
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/mscorlib.dll.bytes",
+                    "AssetGUID": "ca8c8d1d564f29c429eb3e0c53701f01"
+                },
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/QFramework.dll.bytes",
+                    "AssetGUID": "152f85f4433bef24e8335e7074d2dd2e"
+                },
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/System.Core.dll.bytes",
+                    "AssetGUID": "d009881bd08d70040acdf8d4d86fe285"
+                },
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/System.dll.bytes",
+                    "AssetGUID": "b3cc0ea68933b044ea9bfb1ab52559f8"
+                },
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/UnityEngine.CoreModule.dll.bytes",
+                    "AssetGUID": "39f3e4bb1a3f130488cd66dd5eadf1df"
+                },
+                {
+                    "AssetPath": "Assets/Examples/AB/HotDll/PC/YooAsset.dll.bytes",
+                    "AssetGUID": "4018a95e70c632c43bf02292406c158e"
+                }
+            ]
+        }
+    ],
+    "IndependAssets": []
+}
