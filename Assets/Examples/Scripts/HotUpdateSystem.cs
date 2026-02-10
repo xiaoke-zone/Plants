@@ -87,9 +87,15 @@ public class HotUpdateSystem : AbstractSystem, IHotUpdateSystem
                     // 【核心修改点】：强行提取文件名
                     // 这样不管传入的是 "Assets/Android/mscorlib.dll.bytes" 还是 "mscorlib.dll"
                     // 最终 address 都会变成 "mscorlib.dll"
+                    //string address = System.IO.Path.GetFileName(rawPath).Replace(".bytes", "");
+
+                    //var aotHandle = package.LoadAssetSync<TextAsset>(address);
+
                     string address = System.IO.Path.GetFileName(rawPath).Replace(".bytes", "");
+                    Debug.Log($"[Debug] 正在尝试从 YooAsset 加载 AOT 元数据，地址: {address}");
 
                     var aotHandle = package.LoadAssetSync<TextAsset>(address);
+
                     yield return aotHandle;
 
                     if (aotHandle.Status == EOperationStatus.Succeed)

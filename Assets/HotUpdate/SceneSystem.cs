@@ -4,14 +4,12 @@ using YooAsset;
 using UnityEngine;
 using QFramework;
 
+// 【热更层代码】
 public interface ISceneSystem : ISystem
 {
-    /// <summary>
-    /// 异步加载场景
-    /// </summary>
-    /// <param name="sceneName">场景资源地址</param>
-    /// <param name="onSuccess">加载成功回调</param>
     void LoadScene(string sceneName, Action onSuccess = null);
+    // 新增：加载预制体并实例化的简化接口
+    void LoadAndInstantiatePrefab(string location, Transform parent = null, Action<GameObject> onComplete = null);
 }
 
 public class SceneSystem : AbstractSystem, ISceneSystem
@@ -33,6 +31,19 @@ public class SceneSystem : AbstractSystem, ISceneSystem
             else
             {
                 Debug.LogError($"场景 {sceneName} 加载失败: {op.LastError}");
+            }
+        };
+    }
+
+    public void LoadAndInstantiatePrefab(string location, Transform parent = null, Action<GameObject> onComplete = null)
+    {
+        var package = YooAssets.GetPackage("DefaultPackage");
+        var handle = package.LoadAssetAsync<GameObject>(location);
+        handle.Completed += (op) => {
+            if (op.Status == EOperationStatus.Succeed)
+            {
+                var go = GameObject.Instantiate(handle.AssetObject as GameObject, parent);
+                onComplete?.Invoke(go);
             }
         };
     }
